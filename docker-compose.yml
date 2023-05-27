@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    networks:
+      - caddy
+    labels:
+      caddy: ws-api.efprojects.com
+      caddy.reverse_proxy: "{{upstreams 8080}}"
+
+networks:
+  caddy:
+    external: true

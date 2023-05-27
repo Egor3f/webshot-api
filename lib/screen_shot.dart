@@ -64,7 +64,9 @@ Future<Uint8List?> takeScreenShot(
         omitBackground: omitBackground,
         quality: quality,
         fullPage: fullPage,
-        format: _format);
+        format: _format,
+        captureBeyondViewport: false,
+);
   } else {
     rawImage = await page.pdf(
         format: pp.PaperFormat.a4,
