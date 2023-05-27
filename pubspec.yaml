@@ -8,9 +8,9 @@ environment:
 
 
 dependencies:
-  puppeteer: ^2.5.0
-  shelf: ^1.1.0
-  shelf_router: ^1.0.0
+  puppeteer: ^2.24.0
+  shelf: ^1.4.1
+  shelf_router: ^1.1.4
 
 dev_dependencies:
   http: ^0.13.0
