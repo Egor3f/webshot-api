@@ -19,7 +19,7 @@ RUN  apt-get update \
      && chmod +x /usr/sbin/wait-for-it.sh
 ENV CHROME_FORCE_NO_SANDBOX=true
 
-RUN git clone https://www.github.com/EverythingSuckz/webshot-api
+RUN git clone https://github.com/Egor3f/webshot-api
 WORKDIR /app/webshot-api
 RUN dart pub get
 
