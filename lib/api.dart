@@ -70,7 +70,7 @@ class SSApi {
           : 80;
       final delay =
           queryParams['delay'] != null ? int.parse(queryParams['delay']!) : 0;
-      final format = queryParams['format'];
+      final format = queryParams['format'] != null ? queryParams['format'] : 'png';
       final omitBackground =
           queryParams['omitBackground']?.toLowerCase() == 'true';
 
