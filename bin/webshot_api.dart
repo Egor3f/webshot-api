@@ -12,8 +12,7 @@ void main(List<String> args) async {
   final _handler = Pipeline().addMiddleware(logRequests()).addHandler(app);
   app.mount('/', await SSApi().router);
   int port;
-  if (args.isNotEmpty && isValidPort(args.last) && args[0] == '--port' ||
-      args[0] == '-p') {
+  if (args.isNotEmpty && (isValidPort(args.last) && args[0] == '--port' || args[0] == '-p')) {
     port = int.parse(args.last);
   } else {
     port = int.parse(Platform.environment['PORT'] ?? '8080');
